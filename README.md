@@ -22,9 +22,20 @@ $ git clone -b 20170726-dockzen https://github.com/dockzen/googletest.git
 <pre>
 googletest$ ./build.sh arm
 </pre>
+## for amd64 (Build - static library)
+<pre>
+googletest$ ./build.sh
+</pre>
+
 ### outputs
 <pre>
 build
+├── amd64
+│   └── lib
+│       ├── libgmock.a
+│       ├── libgmock_main.a
+│       ├── libgtest.a
+│       └── libgtest_main.a
 ├── arm
 │   └── lib
 │       ├── libgmock.a
@@ -90,9 +101,5 @@ build
             ├── gtest-type-util.h
             └── gtest-type-util.h.pump
 
-</pre>
 
-## for amd64 (install gtest library into Linux Host PC )
-<pre>
-googletest$ ./build.sh
 </pre>
