@@ -103,9 +103,9 @@ endif()
 #
 # Install rules
 install(TARGETS gtest gtest_main
-  DESTINATION lib)
+  DESTINATION ${LIB_INSTALL_DIR})
 install(DIRECTORY ${gtest_SOURCE_DIR}/include/gtest
-  DESTINATION include)
+  DESTINATION ${BIN_INSTALL_DIR}/include)
 
 ########################################################################
 #

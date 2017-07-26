@@ -104,9 +104,9 @@ endif()
 #
 # Install rules
 install(TARGETS gmock gmock_main
-  DESTINATION lib)
+  DESTINATION ${LIB_INSTALL_DIR})
 install(DIRECTORY ${gmock_SOURCE_DIR}/include/gmock
-  DESTINATION include)
+  DESTINATION ${BIN_INSTALL_DIR}/include)
 
 ########################################################################
 #
