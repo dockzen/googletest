@@ -4,7 +4,17 @@
 > Refer the build options to make static libraries.
 > Source is based on 2017-07-26(master).
 
+
+
 ## source
+To build the googletest, the following build system dependencies are required:
+  g++
+### g++ 
+<pre>
+$ sudo apt-get install g++-arm-linux-gnueabi
+</pre>
+
+### gtest
 <pre>
 $ git clone -b 20170726-dockzen https://github.com/dockzen/googletest.git
 </pre>  
