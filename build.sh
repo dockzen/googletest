@@ -14,14 +14,13 @@ if [ "$1" = "arm" ]; then
 	CMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabi-gcc
 	CMAKE_CXX_COMPILER=/usr/bin/arm-linux-gnueabi-g++
 	_LIB_INSTALL_DIR=$(pwd)/build/arm/lib
-
+	_BIN_INSTALL_DIR=$(pwd)/build
 else
 	CMAKE_C_COMPILER=/usr/bin/gcc
 	CMAKE_CXX_COMPILER=/usr/bin/g++
-	_LIB_INSTALL_DIR=$(pwd)/build/amd64/lib
+	_LIB_INSTALL_DIR=/usr/local/lib
+	_BIN_INSTALL_DIR=/usr/local
 fi
-
-_BIN_INSTALL_DIR=$(pwd)/build
 
 cmake . -DCMAKE_C_FLAGS:STRING="${CMAKE_C_FLAGS}" \
 	-DCMAKE_C_COMPILER:FILEPATH="${CMAKE_C_COMPILER}" \
@@ -30,4 +29,8 @@ cmake . -DCMAKE_C_FLAGS:STRING="${CMAKE_C_FLAGS}" \
 	-DLIB_INSTALL_DIR:STRING="${_LIB_INSTALL_DIR}" \
 
 make
-make install
+if [ "$1" = "arm" ]; then
+	make install
+else
+	sudo make install
+fi
