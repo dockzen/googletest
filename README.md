@@ -22,7 +22,7 @@ $ git clone -b 20170726-dockzen https://github.com/dockzen/googletest.git
 <pre>
 googletest$ ./build.sh arm
 </pre>
-## for amd64 (Build - static library)
+## for amd64
 <pre>
 googletest$ ./build.sh
 </pre>
@@ -30,12 +30,6 @@ googletest$ ./build.sh
 ### outputs
 <pre>
 build
-├── amd64
-│   └── lib
-│       ├── libgmock.a
-│       ├── libgmock_main.a
-│       ├── libgtest.a
-│       └── libgtest_main.a
 ├── arm
 │   └── lib
 │       ├── libgmock.a
